@@ -1,0 +1,18 @@
+<form #formErrors='ngForm'(submit)="submitForm()">
+  <textarea 
+  name="quote" 
+  cols="30" 
+  required
+  minlength="4"
+  [(ngModel)]="myQuote.quote"
+  #quote='ngModel'
+  rows="10"></textarea><span *ngIf ="quote.errors">Quotes is Required</span>
+
+  Author: <input type="text" 
+  name="author"
+  minlength="1"
+  required
+  [(ngModel)]="myQuote.author"
+  #author='ngModel'><span *ngIf ="author.errors">Author is Required</span>
+  <input *ngIf="formErrors.valid" class="button" type="submit" value="Register">
+</form>

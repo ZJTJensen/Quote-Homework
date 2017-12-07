@@ -1,0 +1,22 @@
+<fieldset>
+  <div class = "left">
+    <p>"{{myQuotes.quote}}"</p> 
+    <p> - {{myQuotes.author}}</p>
+  </div>
+  <div class= "right">
+    <div class="vote">
+    <h1>+{{myQuotes.votes}}</h1>
+    </div>
+    <div class="buttons">
+        <form (click)= upTrigger()>
+            <input type="submit" name = "up" class="up" value="Vote Up">
+          </form>
+          <form (click)= downTrigger()>
+            <input type="submit" name = "down" class="down" value="Vote Down">
+          </form>
+          <form (click)= deleteTrigger()>
+            <input type="submit" name = "delete" class="delete" value="Delete">
+          </form>
+    </div>
+  </div>
+</fieldset>

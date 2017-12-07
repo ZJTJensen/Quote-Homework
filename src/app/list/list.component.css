@@ -1,0 +1,33 @@
+fieldset{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+.right{
+    display: inline-block;
+
+    margin: 10px;
+}
+.left{
+    display: block;
+    float: right;
+}
+.up{
+    background-color: green;
+    display: block;
+    margin: 0 auto;
+}
+.down{
+    background-color: red;
+    display: block;
+    margin: 0 auto;
+}
+.delete{
+    background-color: black;
+    display: block;
+    margin: 0 auto;
+}
+.buttons{
+    width:auto;
+    float: right;
+}
