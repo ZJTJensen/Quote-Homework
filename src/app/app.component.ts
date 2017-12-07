@@ -9,14 +9,16 @@ import { Quotes } from './quotes';
 export class AppComponent {
   title = 'app';
   quotes =[];
+ 
   invoke(event){
     this.quotes.push(event);
-    this.quotes.sort(function(a, b) {
-      return parseFloat(a.votes) - parseFloat(b.votes);
-  });
+    
   }
   upVote(event){
     event.votes += 1;
+    this.quotes.sort(function(a, b) {
+      return b.votes - a.votes;
+    });
   }
   downVote(event){
     if(event.votes > 0){

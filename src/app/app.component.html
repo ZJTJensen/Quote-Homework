@@ -3,5 +3,5 @@
 
 <h1>Quotes List</h1>
 
-{{quotes[0]|json}}
+{{quotes|json}}
 <app-list *ngFor= "let quote of quotes; let i = index" [myQuotes]='quotes[i]' (up)="upVote(quotes[i])" (down)="downVote(quotes[i])" (delete)="delete(quotes.splice(i, 1))"></app-list>
